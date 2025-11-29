@@ -15,6 +15,7 @@ Then type up: sudo nano /etc/netplan/00-installer-config.yaml and add the follow
 <img width="812" height="532" alt="image" src="https://github.com/user-attachments/assets/0d096d4c-7286-4c15-928d-7c0d51ac2b8c" />  
 And save it and type sudo netplan apply  
 Next generate the keys by typing the command: wg genkey | tee server_private.key | wg pubkey > server_public.key  
+Then type cat server_private.key and cat server_public.key and write them down or save them somewhere.  
 Then type sudo nano /etc/wiresguard/wg0.conf and enter this information:  
 [Interface]  
 Address = 10.8.0.1/24  
