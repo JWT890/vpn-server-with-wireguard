@@ -11,5 +11,18 @@ Next set up the Ubuntu VPN Server VM by going through the usual steps to get it 
 Make sure the memory is 8 GB, click on add, then click on network adapter to add one of the networks that was created, and click on ok  
 After that, start up the Server VM and go through the intall process, after its done, go to the terminal and type ip a to see the network configurations for both network adapters.  
 After that type sudo apt update && sudo apt install wireguard -y to get Wiresguard installed on the system.  
-Next generate the keys by typing the command: 
+Then type up: sudo nano /etc/netplan/00-installer-config.yaml and add the following to it:  
+<img width="812" height="532" alt="image" src="https://github.com/user-attachments/assets/0d096d4c-7286-4c15-928d-7c0d51ac2b8c" />  
+And save it and type sudo netplan apply  
+Next generate the keys by typing the command: wg genkey | tee server_private.key | wg pubkey > server_public.key  
+Then type sudo nano /etc/wiresguard/wg0.conf and enter this information:  
+[Interface]  
+Address = 10.8.0.1/24  
+ListenPort = 51820  
+PrivateKey = <server_private_key>  
+
+PostUp   = iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE  
+PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE  
+
+Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf and then sudo sysctl -p
 
