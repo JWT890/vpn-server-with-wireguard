@@ -2,6 +2,8 @@
 
 A comprehensive guide for deploying secure VPN infrastructure using WireGuard and OpenVPN across physical and virtualized environments. This repository documents complete setup instructions for configuring VPN servers on real networks, building isolated testing labs in VirtualBox, and replicating production-grade environments in VMware Workstation/ESXi. It includes detailed coverage of encryption workflows, key exchange mechanisms, routing table configuration, and secure remote-device onboarding, enabling reliable end-to-end testing, learning, and operational deployment.
 
+Make sure the vmnets are set to VMnet1 as host only with local dhcp off and set to 192.168.56.0 and VMnet8 set to NAT with dhcp enabled and set to 192.168.8.0  
+
 This will involve three VMs the Server VM, Internal LAN and the Client VM, all Ubuntu, and having to set up the respective networks for it.  
 To set up the networks in VMWare, go to Edit up top, click on it and click on Virtual Network Editor it will look like this:  
 <img width="598" height="559" alt="image" src="https://github.com/user-attachments/assets/f533ca67-8576-4208-ac65-b411bb22aab5" />  
@@ -12,7 +14,7 @@ Make sure the memory is 8 GB, click on add, then click on network adapter to add
 After that, start up the Server VM and go through the intall process, after its done, go to the terminal and type ip a to see the network configurations for both network adapters.  
 After that type sudo apt update && sudo apt install wireguard -y to get Wiresguard installed on the system.  
 Then type up: sudo nano /etc/netplan/00-installer-config.yaml and add the following to it:  
-<img width="812" height="532" alt="image" src="https://github.com/user-attachments/assets/0d096d4c-7286-4c15-928d-7c0d51ac2b8c" />  
+<img width="1198" height="669" alt="image" src="https://github.com/user-attachments/assets/9588e624-b40e-49ee-84ae-ef80c36319aa" />  
 And save it and type sudo netplan apply  
 Next generate the keys by typing the command: wg genkey | tee server_private.key | wg pubkey > server_public.key  
 Then type cat server_private.key and cat server_public.key and write them down or save them somewhere.  
