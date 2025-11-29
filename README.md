@@ -9,4 +9,7 @@ Then click on admin change settings and click yes, then you can change the netwo
 Next set up the Ubuntu VPN Server VM by going through the usual steps to get it set up, after getting it set up, right click it in VMWare, click on settings and you will see this:  
 <img width="756" height="733" alt="image" src="https://github.com/user-attachments/assets/faaf4724-ab69-4e16-bdbc-9939a2e9db8f" />  
 Make sure the memory is 8 GB, click on add, then click on network adapter to add one of the networks that was created, and click on ok  
+After that, start up the Server VM and go through the intall process, after its done, go to the terminal and type ip a to see the network configurations for both network adapters.  
+After that type sudo apt update && sudo apt install wireguard -y to get Wiresguard installed on the system.  
+Next generate the keys by typing the command: 
 
