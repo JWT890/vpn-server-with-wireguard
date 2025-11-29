@@ -25,5 +25,9 @@ PrivateKey = <server_private_key>
 PostUp   = iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE  
 PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE  
 
-Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf and then sudo sysctl -p
+Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf and then sudo sysctl -p  
+Then type sudo systemctl enable wg-quick@wg0 and then start. Then check the status of it.  
+
+Now its time to set up the VPN Client VM.  
+Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the network adapter keep it host only or VMnet1
 
