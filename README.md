@@ -31,5 +31,5 @@ Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysct
 Then type sudo systemctl enable wg-quick@wg0 and then start. Then check the status of it.  
 
 Now its time to set up the VPN Client VM.  
-Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the network adapter keep it host only or VMnet1
+Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the network adapter put it on VMnet 8.  
 
