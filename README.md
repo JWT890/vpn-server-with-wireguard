@@ -32,4 +32,9 @@ Then type sudo systemctl enable wg-quick@wg0 and then start. Then check the stat
 
 Now its time to set up the VPN Client VM.  
 Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the network adapter put it on VMnet 8.  
+After getting it setup, go the terminal and type sudo sudo nano /etc/netplan/00-installer-config.yaml. 
+Then add this:  
+<img width="810" height="569" alt="image" src="https://github.com/user-attachments/assets/04799a0a-101f-4eca-8cad-5f6d636360e7" />  
+Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan try and apply. 
+
 
