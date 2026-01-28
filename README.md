@@ -51,5 +51,17 @@ Then add this:
 <img width="826" height="535" alt="image" src="https://github.com/user-attachments/assets/4582509b-c0c3-478c-a102-5292df5c06b0" />  
 Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan. To confirm type ip addr show ens33 and then ping -c 3 192.168.8.2.  
 
+# Internet Connectivity
+On each VM, then try to test internet connectivity by typing ip addr show ens33 which should show each one saying 192.168.8.10-30 like below:  
+Server:  
+<img width="802" height="200" alt="image" src="https://github.com/user-attachments/assets/cb75fdeb-466e-40fb-8bf7-4d9e613821bd" />  
+Client 1:  
+<img width="802" height="266" alt="image" src="https://github.com/user-attachments/assets/cfbde3e8-9537-42cd-ba4c-b5064de779f9" />  
+Client 2:  
+<img width="802" height="196" alt="image" src="https://github.com/user-attachments/assets/cc3c49d2-7be1-4dc7-a743-35d2f99b8fae" />  
+
+
+
+
 
 
