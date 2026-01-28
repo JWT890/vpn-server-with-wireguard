@@ -40,9 +40,16 @@ Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the networ
 After getting it setup, go the terminal and type sudo sudo nano /etc/netplan/00-installer-config.yaml. 
 Then add this:  
 <img width="810" height="569" alt="image" src="https://github.com/user-attachments/assets/04799a0a-101f-4eca-8cad-5f6d636360e7" />  
-Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan try and apply. 
+Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan apply. 
 Then type the command wg genkey | tee client_private.key | wg pubkey > client_public.key to generate the public and private keys, then cat both of them and copy and paste them both in a txt file for later.  
 
 # Second Client VM
+Now its time to setup the VPN Client VM 2.  
+Use an Ubuntu Linux VM, 8096 MB for memory, 80 GB for storage and for the network adapter put it on VMnet 8.  
+After getting it setup, go to the terminal and type sudo nano /etc/netplan/00/installer-config.yaml.  
+Then add this:  
+<img width="826" height="535" alt="image" src="https://github.com/user-attachments/assets/4582509b-c0c3-478c-a102-5292df5c06b0" />  
+Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan. To confirm type ip addr show ens33 and then ping -c 3 192.168.8.2.  
+
 
 
