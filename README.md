@@ -54,11 +54,47 @@ Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo n
 # Internet Connectivity
 On each VM, then try to test internet connectivity by typing ip addr show ens33 which should show each one saying 192.168.8.10-30 like below:  
 Server:  
-<img width="802" height="200" alt="image" src="https://github.com/user-attachments/assets/cb75fdeb-466e-40fb-8bf7-4d9e613821bd" />  
+<img width="575" height="48" alt="image" src="https://github.com/user-attachments/assets/8171f158-9ad7-4082-96d2-cf16314f300d" />  
+*Expected result to not cause routing issues*  
 Client 1:  
 <img width="802" height="266" alt="image" src="https://github.com/user-attachments/assets/cfbde3e8-9537-42cd-ba4c-b5064de779f9" />  
 Client 2:  
 <img width="802" height="196" alt="image" src="https://github.com/user-attachments/assets/cc3c49d2-7be1-4dc7-a743-35d2f99b8fae" />  
+Then do ping -c 3 192.168.8.2 on all of them with an example:  
+<img width="656" height="206" alt="image" src="https://github.com/user-attachments/assets/6115d11d-e35c-4106-bac4-b77444070cfc" />  
+Then do ping -c 3 8.8.8.8 and ping -c 3 google.com on them with examples:  
+<img width="658" height="197" alt="image" src="https://github.com/user-attachments/assets/0b24f78b-afe2-4e78-a965-8c5d52496a05" />  
+<img width="809" height="261" alt="image" src="https://github.com/user-attachments/assets/9ccb5b1b-9c6a-4def-b65f-2dc4378571c3" />  
+
+# VM to VM connection
+From the server ping the addresses for both clients.  
+<img width="889" height="609" alt="image" src="https://github.com/user-attachments/assets/4f9a0b6c-9b22-49d3-891f-dbbc4c0ebc27" />  
+
+From the first vm client:  
+<img width="1093" height="659" alt="image" src="https://github.com/user-attachments/assets/205dafa7-c40c-4779-986d-726e09efed4e" />  
+<img width="660" height="397" alt="image" src="https://github.com/user-attachments/assets/289f0861-a329-4049-94d7-12406555797a" />  
+
+From the second vm client:  
+<img width="856" height="638" alt="image" src="https://github.com/user-attachments/assets/f25dc4ca-cba7-47c6-b8bc-7df59d19a4b8" />  
+<img width="712" height="410" alt="image" src="https://github.com/user-attachments/assets/5d96d4e6-9474-43ea-9476-09f036ddb8ba" />  
+
+# SSH Installation
+On each VM go and install ssh on them by running these commands:  
+sudo apt install net-tools.  
+sudo apt-get update.  
+sudo apt install openssh-server -y.  
+sudo systemctl status ssh, then sudo systemctl start ssh, sudo systemctl enable ssh, then sudo systemctl status ssh to check the status:  
+<img width="981" height="403" alt="image" src="https://github.com/user-attachments/assets/acd950ba-1e2c-4f7f-b95a-99404a8e8e9f" />  
+
+# Hostname
+
+
+
+
+
+
+
+
 
 
 
