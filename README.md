@@ -8,6 +8,9 @@ This will involve three VMs the Server VM, Internal LAN and the Client VM, all U
 To set up the networks in VMWare, go to Edit up top, click on it and click on Virtual Network Editor it will look like this:  
 <img width="598" height="559" alt="image" src="https://github.com/user-attachments/assets/f533ca67-8576-4208-ac65-b411bb22aab5" />  
 Then click on admin change settings and click yes, then you can change the network configs such as add or remove network. Click on add network, make it host only, and make the subnet 192.168.50.0 for VMnet8 and keep VMnet1 the same as default.  
+
+# VPN Server VM
+
 Next set up the Ubuntu VPN Server VM by going through the usual steps to get it set up, after getting it set up, right click it in VMWare, click on settings and you will see this:  
 <img width="756" height="733" alt="image" src="https://github.com/user-attachments/assets/faaf4724-ab69-4e16-bdbc-9939a2e9db8f" />  
 Make sure the memory is 8 GB, click on add, then click on network adapter to add one of the networks that was created, and click on ok  
@@ -30,6 +33,8 @@ PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE
 Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf and then sudo sysctl -p  
 Then type sudo systemctl enable wg-quick@wg0 and then start. Then check the status of it.  
 
+# First Client VM
+
 Now its time to set up the VPN Client VM.  
 Use an Ubuntu Linux VM, 8096 MB for Memory, 80 GB for storage and for the network adapter put it on VMnet 8.  
 After getting it setup, go the terminal and type sudo sudo nano /etc/netplan/00-installer-config.yaml. 
@@ -37,5 +42,7 @@ Then add this:
 <img width="810" height="569" alt="image" src="https://github.com/user-attachments/assets/04799a0a-101f-4eca-8cad-5f6d636360e7" />  
 Save it and type sudo chmod 600 /etc/netplan/00-installer-config.yaml and sudo netplan try and apply. 
 Then type the command wg genkey | tee client_private.key | wg pubkey > client_public.key to generate the public and private keys, then cat both of them and copy and paste them both in a txt file for later.  
+
+# Second Client VM
 
 
