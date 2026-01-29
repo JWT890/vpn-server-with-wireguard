@@ -32,6 +32,7 @@ PostDown = iptables -t nat -D POSTROUTING -s 10.8.0.0/24 -o ens33 -j MASQUERADE
 
 Then enable forwading by typing "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf and then sudo sysctl -p  
 Then type sudo systemctl enable wg-quick@wg0 and then start. Then check the status of it.  
+*Note this will be changed later*
 
 # First Client VM
 
@@ -176,6 +177,13 @@ Then type ip addr show wg0, then sudo wg show and see this result:
 <img width="1037" height="353" alt="image" src="https://github.com/user-attachments/assets/74a3e04e-8fb6-4a1a-8ce1-24ef7575b816" />
 
 Then go to the Client2 VM and enable Wireguard by doing the following:  
+<img width="1200" height="546" alt="image" src="https://github.com/user-attachments/assets/0ea5e14b-08c0-4b22-b8c2-879925ffd399" />  
+Then type ip addr show wg0, then sudo wg show and see this result:  
+<img width="1138" height="350" alt="image" src="https://github.com/user-attachments/assets/ccd26735-27a2-479c-8b1c-4fc859984da5" />  
+
+Then go back to the Server VM to verify the connection with the clients.  
+
+
 
 
 
