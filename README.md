@@ -151,6 +151,7 @@ Save it then type sudo chmod 600 /etc/wireguard/wg0.conf.
 Then go to the Client1 VM and configure WireGuard.  
 Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
 <img width="822" height="526" alt="image" src="https://github.com/user-attachments/assets/3a89e8c1-08d3-4976-9f37-8a47dfc4ac71" />  
+*Capital R here*  
 Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go to the Client2 VM and configure WireGuard.  
@@ -158,6 +159,29 @@ Then go to the Client2 VM and configure WireGuard.
 Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go back to the Server VM and configure the Firewall.  
+Do the following:  
+<img width="638" height="514" alt="image" src="https://github.com/user-attachments/assets/a7fc8e4f-21cf-44e5-9f32-439c7195e263" />  
+
+# VPN Testing & Verification  
+On the Server VM, go and enable Wireguard by doing the following:  
+<img width="1090" height="552" alt="image" src="https://github.com/user-attachments/assets/37abb017-eaba-4fbb-9cef-635933496d69" />  
+Then type ip addr show wg0 and see this result:  
+<img width="1074" height="114" alt="image" src="https://github.com/user-attachments/assets/ce1e21e4-1230-4158-9e07-f11adf8297b5" />  
+Then type sudo wg show and get this result:  
+<img width="630" height="292" alt="image" src="https://github.com/user-attachments/assets/650c2939-6734-4d67-a205-ff888d85fae9" />  
+
+Then go to the Client1 VM and enable Wireguard by doing the following:  
+<img width="1199" height="585" alt="image" src="https://github.com/user-attachments/assets/6af29f7d-baec-49f5-99e5-dd07f11b0102" />  
+Then type ip addr show wg0, then sudo wg show and see this result:  
+<img width="1037" height="353" alt="image" src="https://github.com/user-attachments/assets/74a3e04e-8fb6-4a1a-8ce1-24ef7575b816" />
+
+Then go to the Client2 VM and enable Wireguard by doing the following:  
+
+
+
+
+
+
 
 
 
