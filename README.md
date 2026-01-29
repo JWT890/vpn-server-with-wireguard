@@ -87,6 +87,45 @@ sudo systemctl status ssh, then sudo systemctl start ssh, sudo systemctl enable 
 <img width="981" height="403" alt="image" src="https://github.com/user-attachments/assets/acd950ba-1e2c-4f7f-b95a-99404a8e8e9f" />  
 
 # Hostname
+Type sudo hostnamectl set-hostname wg-server, wg-client1 and client2 on the respective VMs and then sign out and back in to confirm.  
+Example on VM server:  
+<img width="809" height="523" alt="image" src="https://github.com/user-attachments/assets/59a2ae62-98ef-4408-ad7f-be87b21df565" />  
+Example on Client 1:  
+<img width="837" height="579" alt="image" src="https://github.com/user-attachments/assets/ac4458da-106e-4460-8f2a-d01cea761524" />  
+Example on Client 2:  
+<img width="820" height="569" alt="image" src="https://github.com/user-attachments/assets/6a29b6c4-d151-404a-86cf-c4a023e60828" />  
+
+# Host File
+Type sudo nano /etc/hosts and add this at the end of each one in each VM.  
+<img width="494" height="90" alt="image" src="https://github.com/user-attachments/assets/29b9736f-0695-4cea-8427-1eb936b7a60f" />  
+
+# SSH Connectivity
+Now make sure to verify connectivity by ssh into each vm by typing ssh and then the name of the vm such as ssh jon@wg-client1.  
+From the server to the other VMs:  
+Server to WG-Client1:  
+<img width="992" height="670" alt="image" src="https://github.com/user-attachments/assets/56bc72f7-65fe-4980-92d3-8bb305e552fd" />  
+Server to WG-Client2:  
+<img width="953" height="690" alt="image" src="https://github.com/user-attachments/assets/2d099270-9c04-4763-8712-64baada7429b" />  
+
+Client1 to WG-Server:  
+<img width="906" height="667" alt="image" src="https://github.com/user-attachments/assets/b4466d4c-7f27-4f28-80fc-d5b719b07a95" />  
+Client1 to CLient2:  
+<img width="881" height="533" alt="image" src="https://github.com/user-attachments/assets/d2ca6258-63f0-42d4-9ded-5be3dd5a14dc" />  
+
+Client2 to Server:  
+<img width="827" height="543" alt="image" src="https://github.com/user-attachments/assets/bc6a7230-1e1c-441d-8508-4f1096d4c1be" />  
+Client2 to Client1:  
+<img width="735" height="505" alt="image" src="https://github.com/user-attachments/assets/24f54147-fe52-404c-bb50-cb803f7af3f7" />  
+
+# WireGuard Installation  
+
+
+
+
+
+
+
+
 
 
 
