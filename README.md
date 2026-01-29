@@ -130,6 +130,7 @@ On the Server VM:
 First start by creating the directory by typing sudo mkdir -p /etc/wireguard, then sudo su to get into root, then type cd /etc/wireguard.  
 After getting in type wg genkey | sudo tee server_private.key and copy it down somewhere for later.  
 Then type sudo cat server_private.key | wg pubkey | sudo tee server_public.key and copy it down somewhere for later.  
+<img width="665" height="75" alt="image" src="https://github.com/user-attachments/assets/afb1a790-b82e-4173-a2e4-cea3db9b4efb" />  
 
 On the Client1 VM:  
 Generate the private key by typing wg genkey | sudo tee client1_private.key and copy it done somewhere for later.  
@@ -144,6 +145,11 @@ Then type sudo cat client2_private.key | wg pubkey | sudo tee client2.public.key
 
 Then go back to the Server VM and configure WireGuard.  
 Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
+<img width="952" height="637" alt="image" src="https://github.com/user-attachments/assets/30cdbd36-5c44-421a-a0cc-732d5639b0e5" />  
+Save it then type sudo chmod 600 /etc/wireguard/wg0.conf.  
+
+Then go to the Client1 VM and configure WireGuard.  
+
 
 
 
