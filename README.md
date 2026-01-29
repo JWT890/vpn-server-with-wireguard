@@ -132,6 +132,18 @@ After getting in type wg genkey | sudo tee server_private.key and copy it down s
 Then type sudo cat server_private.key | wg pubkey | sudo tee server_public.key and copy it down somewhere for later.  
 
 On the Client1 VM:  
+Generate the private key by typing wg genkey | sudo tee client1_private.key and copy it done somewhere for later.  
+Then type sudo cat client1_private.key | wg pubkey | sudo tee client1.public.key and copy it down somewhere for later.  
+<img width="628" height="75" alt="image" src="https://github.com/user-attachments/assets/e3d3a1b0-cf29-4559-9c23-a1b00b7d1624" />  
+
+
+On the Client2 VM:  
+Generate the private key by typing wg genkey | sudo tee client2_private.key and copy it down somewhere for later.  
+Then type sudo cat client2_private.key | wg pubkey | sudo tee client2.public.key and copy it down somewhere for later.  
+<img width="608" height="97" alt="image" src="https://github.com/user-attachments/assets/8c4ce9fb-7979-415d-bc57-96c1548d6d6d" />  
+
+Then go back to the Server VM and configure WireGuard.  
+
 
 
 
