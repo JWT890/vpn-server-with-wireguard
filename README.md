@@ -143,6 +143,8 @@ Then type sudo cat client2_private.key | wg pubkey | sudo tee client2.public.key
 <img width="608" height="97" alt="image" src="https://github.com/user-attachments/assets/8c4ce9fb-7979-415d-bc57-96c1548d6d6d" />  
 
 Then go back to the Server VM and configure WireGuard.  
+Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
+
 
 
 
