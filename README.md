@@ -118,6 +118,21 @@ Client2 to Client1:
 <img width="735" height="505" alt="image" src="https://github.com/user-attachments/assets/24f54147-fe52-404c-bb50-cb803f7af3f7" />  
 
 # WireGuard Installation  
+Next its time to install Wiresguard on all the VMs, to do so run the command sudo apt install wireguard wireguard-tools -y and then wg version to check the version.  
+Like so on the Client2 VM:  
+<img width="712" height="52" alt="image" src="https://github.com/user-attachments/assets/b88721bd-1ed5-40ec-97b6-9b0544daf790" />  
+Then for the VM Server only, port forwarding will be enabled permanently by following the picture below:  
+<img width="781" height="90" alt="image" src="https://github.com/user-attachments/assets/d0f3e41c-7e15-460a-828e-b28ba0688fa4" />  
+1 is the expected output since it shows it is working properly.  
+
+# WireGuard Configuration
+On the Server VM:  
+First start by creating the directory by typing sudo mkdir -p /etc/wireguard, then sudo su to get into root, then type cd /etc/wireguard.  
+After getting in type wg genkey | sudo tee server_private.key and copy it down somewhere for later.  
+Then type sudo cat server_private.key | wg pubkey | sudo tee server_public.key and copy it down somewhere for later.  
+
+On the Client1 VM:  
+
 
 
 
