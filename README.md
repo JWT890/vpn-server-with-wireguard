@@ -154,6 +154,11 @@ Type sudo nano /etc/wireguard/wg0.conf and input this info into it:
 Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go to the Client2 VM and configure WireGuard.  
+<img width="813" height="504" alt="image" src="https://github.com/user-attachments/assets/69b0a0ea-8745-4a05-9f77-232d3ca5fc30" />  
+Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
+
+Then go back to the Server VM and configure the Firewall.  
+
 
 
 
