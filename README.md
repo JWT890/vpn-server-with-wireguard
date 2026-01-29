@@ -149,6 +149,12 @@ Type sudo nano /etc/wireguard/wg0.conf and input this info into it:
 Save it then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go to the Client1 VM and configure WireGuard.  
+Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
+<img width="822" height="526" alt="image" src="https://github.com/user-attachments/assets/3a89e8c1-08d3-4976-9f37-8a47dfc4ac71" />  
+Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
+
+Then go to the Client2 VM and configure WireGuard.  
+
 
 
 
