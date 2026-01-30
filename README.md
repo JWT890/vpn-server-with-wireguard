@@ -146,17 +146,16 @@ Then type sudo cat client2_private.key | wg pubkey | sudo tee client2.public.key
 
 Then go back to the Server VM and configure WireGuard.  
 Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
-<img width="952" height="637" alt="image" src="https://github.com/user-attachments/assets/30cdbd36-5c44-421a-a0cc-732d5639b0e5" />  
+<img width="777" height="546" alt="image" src="https://github.com/user-attachments/assets/94bf5029-83c4-4e47-8924-da43774a03f2" />  
 Save it then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go to the Client1 VM and configure WireGuard.  
 Type sudo nano /etc/wireguard/wg0.conf and input this info into it:  
-<img width="822" height="526" alt="image" src="https://github.com/user-attachments/assets/3a89e8c1-08d3-4976-9f37-8a47dfc4ac71" />  
-*Capital R here*  
+<img width="819" height="531" alt="image" src="https://github.com/user-attachments/assets/4d3ce026-c18d-49c1-8e42-36b96925224c" />  
 Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go to the Client2 VM and configure WireGuard.  
-<img width="813" height="504" alt="image" src="https://github.com/user-attachments/assets/69b0a0ea-8745-4a05-9f77-232d3ca5fc30" />  
+<img width="831" height="526" alt="image" src="https://github.com/user-attachments/assets/15afc9e5-9eb3-4cbd-a3ed-ca05ef978be5" />  
 Save it and then type sudo chmod 600 /etc/wireguard/wg0.conf.  
 
 Then go back to the Server VM and configure the Firewall.  
