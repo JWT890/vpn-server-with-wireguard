@@ -98,7 +98,7 @@ Example on Client 2:
 
 # Host File
 Type sudo nano /etc/hosts and add this at the end of each one in each VM.  
-<img width="494" height="90" alt="image" src="https://github.com/user-attachments/assets/29b9736f-0695-4cea-8427-1eb936b7a60f" />  
+<img width="445" height="82" alt="image" src="https://github.com/user-attachments/assets/421946ba-dea9-4e85-854c-abb7dbcca53a" />  
 
 # SSH Connectivity
 Now make sure to verify connectivity by ssh into each vm by typing ssh and then the name of the vm such as ssh jon@wg-client1.  
