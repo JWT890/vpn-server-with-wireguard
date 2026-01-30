@@ -182,7 +182,41 @@ Then go to the Client2 VM and enable Wireguard by doing the following:
 Then type ip addr show wg0, then sudo wg show and see this result:  
 <img width="1138" height="350" alt="image" src="https://github.com/user-attachments/assets/ccd26735-27a2-479c-8b1c-4fc859984da5" />  
 
-Then go back to the Server VM to verify the connection with the clients.  
+Then go back to the Server VM to verify the connection with the clients.  Make sure to the follow the links in the section.  
+<img width="723" height="399" alt="image" src="https://github.com/user-attachments/assets/13779ac5-555e-4e84-b687-f032c79f5441" />  
+
+Then go test VPN connectivity between the VMs.  
+Server to Client 1 and 2:  
+<img width="708" height="446" alt="image" src="https://github.com/user-attachments/assets/6f86cdb3-20f2-4acd-99f7-af87ce868296" />  
+
+Client 1 to Server and 2:  
+<img width="829" height="670" alt="image" src="https://github.com/user-attachments/assets/99e73c5c-ef32-4c4a-b8db-070f6ccb3ff6" />  
+
+Client 2 to Client 1 and Server:  
+<img width="767" height="671" alt="image" src="https://github.com/user-attachments/assets/2b5dffaf-6111-4583-9920-b6011f911fb2" />  
+
+Then from one of the VMs run ip route show and get this:  
+<img width="794" height="94" alt="image" src="https://github.com/user-attachments/assets/d8850178-5829-4f4c-9ac2-13241af251dc" />  
+
+Then run a traceroute from Client1 to Server like so:  
+<img width="694" height="73" alt="image" src="https://github.com/user-attachments/assets/cb89db99-9e71-4a94-a1dd-811383279655" />  
+
+# Performance Test
+On both Server and Client1 run the sudo apt install iperf3 -y command onto both.  
+On Client run the command iperf3 -s and on client1 run iperf3 -c 10.8.0.1 -t 10.  
+Client1 output:  
+<img width="868" height="444" alt="image" src="https://github.com/user-attachments/assets/ac5d93f1-2081-4ad6-9b5c-cf0e4fff8ebe" />  
+Server Output:  
+<img width="798" height="477" alt="image" src="https://github.com/user-attachments/assets/8530d684-5ebb-4925-87e1-25204538ac36" />  
+
+# MFA Installation
+
+
+
+
+
+
+
 
 
 
