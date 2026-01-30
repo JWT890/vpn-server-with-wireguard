@@ -164,6 +164,8 @@ Do the following:
 <img width="638" height="514" alt="image" src="https://github.com/user-attachments/assets/a7fc8e4f-21cf-44e5-9f32-439c7195e263" />  
 
 # VPN Testing & Verification  
+Follow this link since there will be issues: https://claude.ai/share/5874641e-f9d8-4266-b495-874298e11a0a  
+To continue: https://gemini.google.com/share/0b00f0bda2d2  
 On the Server VM, go and enable Wireguard by doing the following:  
 <img width="1090" height="552" alt="image" src="https://github.com/user-attachments/assets/37abb017-eaba-4fbb-9cef-635933496d69" />  
 Then type ip addr show wg0 and see this result:  
