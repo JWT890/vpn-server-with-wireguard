@@ -208,16 +208,8 @@ Client1 output:
 <img width="868" height="444" alt="image" src="https://github.com/user-attachments/assets/ac5d93f1-2081-4ad6-9b5c-cf0e4fff8ebe" />  
 Server Output:  
 <img width="798" height="477" alt="image" src="https://github.com/user-attachments/assets/8530d684-5ebb-4925-87e1-25204538ac36" />  
+And with Client2 output:  
 
-# MFA Installation
-On the Server VM, install the Google Authenticator by typing sudo apt install libpam-google-authenticator -y and then type google-authenticator.  
-Answer the first question and will get a QR code and emergency codes, scan the QR code with the Google Authenticator app and sign in the password generated.  
-Then answer the rest of the prompts with a y answer.  
-After that run sudo nano /etc/pam.d/sshd and add this at the top:  
-<img width="603" height="95" alt="image" src="https://github.com/user-attachments/assets/472b1ddb-ad12-455f-8b8a-4f85737633c1" />  
-Then add these:  
-<img width="499" height="97" alt="image" src="https://github.com/user-attachments/assets/07fb38be-27a7-4494-9fd9-b824d4aab6ce" />  
-Then test the configuration by typing sudo sshd -t and then sudo systemctl restart sshd
 
 
 
