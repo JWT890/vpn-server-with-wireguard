@@ -213,6 +213,10 @@ And with Client2 output:
 
 This repository provides a complete, hands-on guide to deploying a secure VPN server using WireGuard across both physical and virtualized environments. It walks through step-by-step instructions for configuring VPN infrastructure on real networks and within lab setups like VirtualBox and VMware Workstation/ESXi. Included are details on encryption and key exchange workflows, routing and interface setup, and how to onboard remote clients securely. Whether you’re building a home lab, setting up production-grade access, or learning about modern VPN technologies, this documentation equips you with all the essential configuration and deployment knowledge for a reliable WireGuard-based VPN server.
 
+# Diagram
+<img width="1440" height="1240" alt="image" src="https://github.com/user-attachments/assets/ccb5181b-2859-4905-8a94-c9c7ca85a67d" />  
+
+
 
 
 
